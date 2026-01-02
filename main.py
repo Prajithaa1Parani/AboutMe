@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-from profile import name, degree
-from goals import goal
+from resume_data import name, degree, skills, goal
 
 app = Flask(__name__)
 
@@ -14,7 +13,14 @@ def home():
     )
 @app.route("/resume")
 def resume():
-    return render_template("resume.html")
+    return render_template(
+        "resume.html",
+        name=name,
+        degree=degree,
+        skills=skills,
+        goal=goal
+    )
+
 
 if __name__ == "__main__":
     app.run(debug=True)

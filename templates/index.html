@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <style>
+    body {
+        background-color: red;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+
+        /* center the card */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100vh;
+    }
+
+    .card {
+        background-color: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        width: 350px;
+
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+</style>
+
+</head>
+<body>
+    <div class="card">
+        <h1>About Me</h1>
+
+        <p><b>Name:</b> {{ name }}</p>
+        <p><b>Degree:</b> {{ degree }}</p>
+        <p><b>Goal:</b> {{ goal }}</p>
+    </div>
+</body>
+
+</html>
